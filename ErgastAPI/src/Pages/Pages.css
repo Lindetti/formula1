@@ -1,16 +1,104 @@
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.home {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 table {
   font-family: arial, sans-serif;
+  margin-top: 1rem;
+  background-color: white;
+  border: 4px solid red;
   border-collapse: collapse;
-  width: 85%;
 }
 
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+tbody {
+  border: 1.5px solid black;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.tableHead {
+  text-align: center;
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
+}
+
+.round,
+.pos {
+  background-color: #cc0000;
+  color: white;
+  width: 120px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.qualifying {
+  width: 250px;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.race {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.race h2 {
+  color: #cc0000;
+}
+
+.race p,
+.points p,
+.wins p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.driver {
+  padding: 1rem;
+}
+
+.standings {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.standings h1 {
+  color: white;
+  text-align: center;
+}
+
+.constructor {
+  width: 200px;
+  padding: 1rem;
+}
+
+.resultsDiv h1 {
+  color: white;
+  text-align: center;
+}
+
+.results {
+  padding: 1rem;
+}
+
+.innerResults {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+.resultsStandard {
+  padding: 1rem;
+  text-align: center;
 }

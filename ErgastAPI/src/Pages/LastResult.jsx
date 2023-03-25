@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const Results = () => {
   const [result, setResult] = useState([]);
+  const [color, setColor] = useState("green");
 
   useEffect(() => {
     fetch("https://ergast.com/api/f1/current/last/results.json")
@@ -16,38 +17,42 @@ const Results = () => {
   }, []);
 
   return (
-    <div className="results">
-      <h1>Last Results</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Driver</th>
-            <th>Constructor</th>
-            <th>Laps</th>
-            <th>Grid</th>
-            <th>Time</th>
-            <th>Status</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-        {result.map((item, key) => {
-          return (
-            <tbody>
-              <tr key={key}>
-                <td>{item.position}</td>
-                <td>{item.Driver.code}</td>
-                <td>{item.Constructor.name}</td>
-                <td>{item.laps}</td>
-                <td>{item.grid}</td>
-                <td>{item.time}</td>
-                <td>{item.status}</td>
-                <td>{item.points}</td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </table>
+    <div className="resultsDiv">
+      <div className="results">
+        <h1>Last Results</h1>
+        <table className="resultsTable">
+          <thead>
+            <tr>
+              <th className="tableHead">Pos</th>
+              <th className="tableHead">Driver</th>
+              <th className="tableHead">Laps</th>
+              <th className="tableHead">Grid</th>
+              <th className="tableHead">Time</th>
+              <th className="tableHead">Status</th>
+              <th className="tableHead">Points</th>
+            </tr>
+          </thead>
+          {result.map((item, key) => {
+            return (
+              <tbody key={key}>
+                <tr>
+                  <td className="pos">
+                    <h2> {item.position}</h2>
+                  </td>
+                  <td className="innerResults">
+                    <h4>{item.Driver.code}</h4>
+                  </td>
+                  <td className="resultsStandard">{item.laps}</td>
+                  <td className="resultsStandard">{item.grid}</td>
+                  <td className="resultsStandard">{item.time}</td>
+                  <td className="resultsStandard">{item.status}</td>
+                  <td className="innerResults">{item.points}</td>
+                </tr>
+              </tbody>
+            );
+          })}
+        </table>
+      </div>
     </div>
   );
 };
