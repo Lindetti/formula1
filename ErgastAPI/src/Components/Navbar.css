@@ -1,0 +1,15 @@
+nav {
+  background-color: lightblue;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+}

@@ -17,31 +17,27 @@ const Home = () => {
     <div className="home">
       <table>
         <thead>
-          <tr>
-            <th>Season - Round</th>
-            <th>Qualifying</th>
-            <th>Raceday</th>
-          </tr>
+          <td className="tableHead">Round</td>
+          <td className="tableHead">Qualifying</td>
+          <td className="tableHead">Race Day</td>
         </thead>
-        {schedule.map((schedule) => {
+        {schedule.map((schedule, key) => {
           return (
-            <tbody>
+            <tbody key={key}>
               <tr>
-                <td>
-                  {schedule.season} - Round: {schedule.round}
-                  <br />
-                  <em>
-                    {schedule.Circuit.Location.country}{" "}
-                    {schedule.Circuit.Location.locality}
-                  </em>
+                <td className="round">
+                  <h2> R{schedule.round} </h2>
                 </td>
-                <td>
-                  {schedule.Qualifying.date} - {schedule.Qualifying.time}
-                </td>
-                <td>
-                  {schedule.raceName}
+                <td className="qualifying">
+                  {schedule.Qualifying.date}
                   <br />
+                  {schedule.Qualifying.time}
+                </td>
+                <td className="race">
+                  <p>{schedule.raceName}</p>
+                  <h2>{schedule.Circuit.Location.country} </h2>
                   <em>
+                    {" "}
                     {schedule.date} - {schedule.time}
                   </em>
                 </td>
