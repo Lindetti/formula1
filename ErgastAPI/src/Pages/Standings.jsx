@@ -34,7 +34,7 @@ const Standings = () => {
         <table>
           <thead>
             <tr>
-              <th className="tableHead">Pos</th>
+              <th className="tableHead">Pos.</th>
               <th className="tableHead">Driver</th>
               <th className="tableHead">Points</th>
               <th className="tableHead">Wins</th>
@@ -67,7 +67,7 @@ const Standings = () => {
         <table>
           <thead>
             <tr>
-              <th className="tableHead">Pos</th>
+              <th className="tableHead">Pos.</th>
               <th className="tableHead">Constuctor</th>
               <th className="tableHead">Points</th>
               <th className="tableHead">Wins</th>
