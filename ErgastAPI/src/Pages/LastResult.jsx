@@ -1,4 +1,4 @@
-import "./Pages.css";
+import "./lastresults.css";
 import { useEffect, useState } from "react";
 //http://ergast.com/api/f1/current/last/results.json
 
@@ -21,9 +21,15 @@ const Results = () => {
     <div className="resultsDiv">
       <div className="results">
         <div className="resultInfo">
-          <h1>Season {resultInfo.season}</h1>
-          <h3>{resultInfo.raceName}</h3>
-          <p>{resultInfo.date}</p>
+          <div className="box">
+            <p>Season {resultInfo.season} / </p>
+          </div>
+          <div className="box">
+            <p>{resultInfo.raceName} </p>
+          </div>
+          <div className="box">
+            <p>/ {resultInfo.date}</p>
+          </div>
         </div>
         <table className="resultsTable">
           <thead>

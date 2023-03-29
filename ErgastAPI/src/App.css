@@ -1,17 +1,12 @@
 body {
-  background-color: #262626;
-  /*   background: url("images/background1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-}
-
-* {
-  margin: 0 auto;
+  /*   background-color: #262626; */
+  margin: 0;
 }
 
 .wrapper {
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: auto;
+  justify-content: center;
 }
