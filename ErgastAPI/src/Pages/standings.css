@@ -1,0 +1,12 @@
+.driverStandings {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #004d66;
+  color: lightgreen;
+}

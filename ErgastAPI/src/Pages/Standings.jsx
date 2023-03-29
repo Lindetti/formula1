@@ -1,4 +1,4 @@
-import "./pages.css";
+import "./standings.css";
 import { useState, useEffect } from "react";
 //https://ergast.com/api/f1/current/driverStandings.json
 //https://ergast.com/api/f1/current/constructorStandings.json
@@ -30,7 +30,9 @@ const Standings = () => {
   return (
     <div className="standings">
       <div className="driverStandings">
-        <h1>Driver Standings</h1>
+        <div className="header">
+          <p>Driver Standings</p>
+        </div>
         <table>
           <thead>
             <tr>
@@ -62,7 +64,7 @@ const Standings = () => {
           })}
         </table>
       </div>
-      <div className="constructorStandings">
+      {/* <div className="constructorStandings">
         <h1>Constructor Standings</h1>
         <table>
           <thead>
@@ -94,7 +96,7 @@ const Standings = () => {
             );
           })}
         </table>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -5,13 +5,32 @@ const NavBar = () => {
   return (
     <nav>
       <div className="links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/results">Last Results</NavLink>
-        <NavLink to="/standings">Standings</NavLink>
-        <NavLink to="/drivers">Drivers</NavLink>
+        <NavLink className={pathname === "/" ? "active" : ""} to="/">
+          Schedule
+        </NavLink>
+        <NavLink
+          className={pathname === "/results" ? "active" : ""}
+          to="/results"
+        >
+          Last Results
+        </NavLink>
+        <NavLink
+          className={pathname === "/standings" ? "active" : ""}
+          to="/standings"
+        >
+          Standings
+        </NavLink>
+        <NavLink
+          className={pathname === "/drivers" ? "active" : ""}
+          to="/drivers"
+        >
+          Drivers
+        </NavLink>
       </div>
     </nav>
   );
 };
 
 export default NavBar;
+
+//  <Link className={(pathname === '/homepage') ? 'active' : ''} to="/homepage">Dashboard</Link>

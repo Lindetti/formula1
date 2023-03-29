@@ -1,0 +1,18 @@
+.results {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultInfo {
+  background-color: #004d66;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  color: lightgreen;
+  font-size: 1.2rem;
+}
