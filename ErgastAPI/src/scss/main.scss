@@ -1,3 +1,20 @@
 @import './1-base/variables';
+@import './1-base/reset';
+@import './1-base/globals';
 @import './1-base/mixins';
 @import './1-base/typography';
+@import './1-base/animation';
+
+@import './2-components/card';
+@import './2-components/navigation';
+@import './2-components/search';
+
+body {
+  background-color: #f8f8f8;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+section {
+  margin-block: 4rem;
+}
