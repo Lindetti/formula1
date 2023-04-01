@@ -77,30 +77,39 @@ const Home = () => {
     }
   };
 
-  console.log(getCountryCode())
-
   return (
     <div className="home-wrapper">
  <div className="season-header">
-  <h2>Season {season.season}</h2>
+<div className="season">
+ <h2>Season {season.season}</h2> 
+</div>
+  <div className="upcomingRaceDiv"> 
         {upcomingRace && (
           <h2>Next race:  {upcomingRace.raceName} - {upcomingRace.date}</h2>
         )}
+        </div>
       </div>
       <div className="schedule-wrapper">
       <div className="schedule-column1">
           {firstHalf.map((schedule) => {
             const countryCode = getCountryCode(schedule.Circuit.Location.country);
-            console.log(schedule.Circuit.Location.country, countryCode)
             return (
               <div className="mapped-divs" key={schedule.round}>
-            <h2>R: {schedule.round}</h2>
-                <p>{schedule.raceName}</p>
-                <div className="countryDiv">
+                <div className="myCountryDiv"> 
                 <CircleFlag countryCode={countryCode.toLowerCase()} width={50} height={50} />
-                    <h2 className="country">{schedule.Circuit.Location.country}</h2>
-  </div>  
-                <p>Date: {schedule.date}</p>
+                </div>
+                <div className="info"> 
+                <div className="roundAndDate">
+                  <div className="roundDiv">
+                <p className="round">Round: {schedule.round}</p>
+                </div>
+                <div className="dateDiv">
+                <p> {schedule.date}</p>
+                </div>
+                </div>
+                <p>{schedule.raceName}</p>
+                <p className="country">{schedule.Circuit.circuitName}</p>
+                </div>
               </div>
             );
           })}
@@ -110,13 +119,21 @@ const Home = () => {
                 const countryCode = getCountryCode(schedule.Circuit.Location.country);
             return (
               <div className="mapped-divs" key={schedule.round}>
-                <h2>R: {schedule.round}</h2>
-                <p>{schedule.raceName}</p>
-                <div className="countryDiv">
+              <div className="myCountryDiv"> 
                 <CircleFlag countryCode={countryCode.toLowerCase()} width={50} height={50} />
-              <h2 className="country">{schedule.Circuit.Location.country}</h2>
-  </div>
-                <p>Date: {schedule.date}</p>
+                </div>
+                <div className="info"> 
+                <div className="roundAndDate">
+                  <div className="roundDiv">
+                  <p className="round">Round: {schedule.round}</p>
+                </div>
+                <div className="dateDiv">
+                <p> {schedule.date}</p>
+                </div>
+                </div>
+                <p>{schedule.raceName}</p>
+                <p className="country">{schedule.Circuit.circuitName}</p>
+                </div>
               </div>
             );
           })}

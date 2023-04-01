@@ -18,9 +18,43 @@ const Results = () => {
   }, []);
 
   return (
-    <div className="resultsDiv">
- 
-<h1>Last results</h1>
+    <div className="results-wrapper">
+    <div className="results-main">
+<div className="tbl-header">
+<table cellpadding="0" cellspacing="0" border="0">
+<thead>
+  <tr> 
+  <th>Pos.</th>
+  <th>Driver</th>
+  <th>Constructor</th>
+  <th>Laps</th>
+  <th>Status</th>
+  <th>Time</th>
+  <th>Pts</th>
+  </tr>
+</thead>
+</table>
+</div>
+<div className="tbl-content">
+<table> 
+<tbody>
+{result.map(result => {
+  return (
+    <tr>
+    <td>{result.position}</td>
+    <td className="drivers">{result.Driver.familyName}</td>
+    <td>{result.Constructor.name}</td>
+    <td>{result.laps}</td>
+    <td>{result.status}</td>
+    <td>{result.Time ? result.Time.time : '-'}</td>
+    <td>{result.points}</td>
+    </tr>
+  )
+})}
+</tbody>
+</table>
+</div>
+    </div>
     </div>
   );
 };
