@@ -15,20 +15,7 @@ const Drivers = () => {
   }, []);
   return (
     <div className="driversDiv">
-      <h1>Drivers Current season</h1>
-      {drivers.map((item) => {
-        return (
-          <div className="drivers">
-            <h2>{item.permanentNumber}</h2>
-            <a href="#">
-              {" "}
-              <p>
-                {item.familyName} {item.givenName}
-              </p>
-            </a>
-          </div>
-        );
-      })}
+  <h1>Drivers</h1>
     </div>
   );
 };

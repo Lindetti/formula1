@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-circle-flags": "^0.0.18",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0"
   },

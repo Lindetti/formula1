@@ -29,75 +29,8 @@ const Standings = () => {
   }, []);
   return (
     <div className="standings">
-      <div className="driverStandings">
-        <div className="header">
-          <p>Driver Standings</p>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th className="tableHead">Pos.</th>
-              <th className="tableHead">Driver</th>
-              <th className="tableHead">Points</th>
-              <th className="tableHead">Wins</th>
-            </tr>
-          </thead>
-          {standings.map((standings, key) => {
-            return (
-              <tbody key={key}>
-                <tr>
-                  <td className="pos">
-                    <h2>{standings.position}</h2>
-                  </td>
-                  <td className="driver">
-                    <h4>{standings.Driver.familyName.toUpperCase()} </h4>
-                  </td>
-                  <td className="points">
-                    <p>{standings.points}</p>
-                  </td>
-                  <td className="wins">
-                    <p>{standings.wins}</p>
-                  </td>
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
+    <h1>Standings</h1>
       </div>
-      {/* <div className="constructorStandings">
-        <h1>Constructor Standings</h1>
-        <table>
-          <thead>
-            <tr>
-              <th className="tableHead">Pos.</th>
-              <th className="tableHead">Constuctor</th>
-              <th className="tableHead">Points</th>
-              <th className="tableHead">Wins</th>
-            </tr>
-          </thead>
-          {driverStand.map((standings, key) => {
-            return (
-              <tbody key={key}>
-                <tr>
-                  <td className="pos">
-                    <h2>{standings.position}</h2>
-                  </td>
-                  <td className="constructor">
-                    <h4>{standings.Constructor.name.toUpperCase()} </h4>
-                  </td>
-                  <td className="points">
-                    <p>{standings.points}</p>
-                  </td>
-                  <td className="wins">
-                    <p>{standings.wins}</p>
-                  </td>
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
-      </div> */}
-    </div>
   );
 };
 

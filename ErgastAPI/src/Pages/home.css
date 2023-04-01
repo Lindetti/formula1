@@ -1,39 +1,66 @@
-/*
-  background-color: #20262e;
-*/
-.newDiv {
-  display: flex;
-  flex-direction: column;
+.home-wrapper {
+  width: auto;
+  height: auto;
 }
-.info {
-  background-color: #004d66;
-  color: lightgreen;
-  font-size: 1.6rem;
+
+.season-header {
+  text-align: center;
+}
+
+
+.schedule-wrapper {
+  background: rgba(0, 0, 0, .65);
+  width: 900px;
+  height: 520px;
   display: flex;
   justify-content: center;
+  gap: 2rem;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 500px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  background-color: #004d66;
-}
-
-td,
-th {
-  text-align: center;
-  padding: 8px;
+.schedule-column1 {
+  height: 800px;
+  width: 400px;
   color: white;
 }
 
-td {
-  border-bottom: 1px solid lightgray;
-  border-top: 1px solid lightgray;
+.schedule-column2 {
+  height: 850px;
+  width: 400px;
+  color: white;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.country {
+  color: red;
+}
+
+.mapped-divs {
+  border-bottom: 1px solid red;
+}
+
+.countryDiv {
+  display: flex;
+  gap: 1rem;
+}
+
+.countryDiv img {
+  width: 50px;
+}
+
+div.schedule-wrapper::-webkit-scrollbar {
+  width: 15px;
+  background: lightgray;
+}
+
+div.schedule-wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,255,1);
+  border-radius: 15px;
+}
+
+div.schedule-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  background: red;
 }
