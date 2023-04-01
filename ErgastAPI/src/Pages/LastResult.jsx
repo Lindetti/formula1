@@ -19,53 +19,8 @@ const Results = () => {
 
   return (
     <div className="resultsDiv">
-      <div className="results">
-        <div className="resultInfo">
-          <div className="box">
-            <p>Season {resultInfo.season} / </p>
-          </div>
-          <div className="box">
-            <p>{resultInfo.raceName} </p>
-          </div>
-          <div className="box">
-            <p>/ {resultInfo.date}</p>
-          </div>
-        </div>
-        <table className="resultsTable">
-          <thead>
-            <tr>
-              <th className="tableHead">Pos.</th>
-              <th className="tableHead">Driver</th>
-              <th className="tableHead">Constructor</th>
-              {/*      <th className="tableHead">Grid</th> */}
-              <th className="tableHead">Laps</th>
-              {/*         <th className="tableHead">Time</th> */}
-              {/*  <th className="tableHead">Status</th> */}
-              <th className="tableHead">Pts.</th>
-            </tr>
-          </thead>
-          {result.map((item, key) => {
-            return (
-              <tbody key={key}>
-                <tr>
-                  <td className="pos">
-                    <h2> {item.position}</h2>
-                  </td>
-                  <td className="innerResults">
-                    <h4>{item.Driver.familyName}</h4>
-                  </td>
-                  <td className="resultsStandard">{item.Constructor.name}</td>
-                  {/*   <td className="resultsStandard">{item.grid}</td> */}
-                  <td className="resultsStandard">{item.laps}</td>
-                  {/* <td className="resultsStandard">{item.time}</td> */}
-                  {/* <td className="resultsStandard">{item.status}</td> */}
-                  <td className="innerResults">{item.points}</td>
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
-      </div>
+ 
+<h1>Last results</h1>
     </div>
   );
 };

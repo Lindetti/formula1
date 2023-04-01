@@ -1,31 +1,17 @@
 nav {
   display: flex;
   justify-content: center;
-}
-.linksDiv {
-  display: flex;
-  justify-content: center;
+  background-color: red;
+  height: 50px;
+  align-items: center;
 }
 
 .links {
-  width: 500px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  background-color: #006080;
-  height: 50px;
-  border-bottom: 1px solid black;
 }
 
 .links a {
   text-decoration: none;
   color: white;
-}
-
-.active {
-  background-color: lawngreen;
-  padding: 0.5rem;
-  border-radius: 2px;
-  color: black;
 }
