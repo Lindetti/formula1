@@ -1,0 +1,21 @@
+.search {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    padding-bottom: 0.5rem;
+  }
+
+  &__input {
+    display: flex;
+    padding: 1rem;
+    border: $border-default;
+    border-radius: $border-radius-base;
+    color: $text-color;
+    font-size: $font-size-sm;
+
+    &::placeholder {
+      color: #a3a3a3;
+    }
+  }
+}

@@ -28,9 +28,12 @@ const Standings = () => {
       });
   }, []);
   return (
-    <div className="standings">
-    <h1>Standings</h1>
-      </div>
+    <div className="container">
+      <section>
+        <h1>Standings</h1>
+        Standings for Drivers
+      </section>
+    </div>
   );
 };
 
