@@ -3,21 +3,42 @@
   height: auto;
 }
 
-.season-header {
-  text-align: center;
-}
-
-
 .schedule-wrapper {
   background: rgba(0, 0, 0, .65);
   width: 900px;
   height: 520px;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   overflow: auto;
-  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-left: 10px solid red;
+  border-bottom-left-radius: 5px;
+}
+
+.season-header {
+  background-color: red;
+  display: grid;
+  grid-auto-flow: column;
+  background: rgba(0, 0, 0, .65);
+  border-bottom: 0.3px solid lightgray;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.season {
+  display: flex;
+  justify-content: start;
+  padding-left: 1rem;
+  color: white;
+}
+
+.upcomingRaceDiv {
+  display: flex;
+  justify-content: end;
+  color: white;
+  padding-right: 1rem;
 }
 
 .schedule-column1 {
@@ -37,17 +58,38 @@
 }
 
 .mapped-divs {
-  border-bottom: 1px solid red;
-}
-
-.countryDiv {
+  border-bottom: 1px solid lightgray;
   display: flex;
+  align-items: center;
   gap: 1rem;
+  margin-top: 0.5rem;
 }
 
-.countryDiv img {
-  width: 50px;
+.roundAndDate {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  width: 300px;
+  height: 50px;
 }
+
+.roundDiv {
+  display: flex;
+  justify-content: start;
+
+}
+
+.round {
+  background-color: red;
+  padding: 0.15rem;
+  border-radius: 3px;
+}
+
+.dateDiv {
+  display: flex;
+  justify-content: end;
+}
+
 
 div.schedule-wrapper::-webkit-scrollbar {
   width: 15px;
