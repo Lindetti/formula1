@@ -1,11 +1,14 @@
 import ".././scss/PagesFolder/Drivers.scss"
 import { useState, useEffect } from "react";
 import DriverImage from "../images/person.png"
+import Modal from "../Components/Modal/Modal";
 //https://ergast.com/api/f1/current/drivers.json
 
 const Drivers = () => {
   const [drivers, setDrivers] = useState([]);
-
+  const [selectedDriver, setSelectedDriver] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Declare isModalOpen state variable
+  
   useEffect(() => {
     fetch("https://ergast.com/api/f1/current/driverStandings.json")
       .then((response) => response.json())
@@ -16,6 +19,17 @@ const Drivers = () => {
         setDrivers(driverStandings);
       });
   }, []);
+
+  const handleDriverClick = (driver) => {
+    console.log("Driver clicked: ", driver);
+    setSelectedDriver(driver);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedDriver(null);
+    setIsModalOpen(false);
+  };
 
   const getTeamColor = (constructorName) => {
     switch (constructorName) {
@@ -79,7 +93,7 @@ const Drivers = () => {
           const teamColor = getTeamColor(driver.Constructors[0].name);
           const teamTextColor = getTeamNumberColor(driver.Constructors[0].name);
         return (
-          <div className="driver-card-item" key={key}>
+          <div className="driver-card-item" key={key} onClick={() => handleDriverClick(driver)}>
             <div className="driverPoints">
             <div className="standing">
             <p>{driver.position}</p>
@@ -112,6 +126,13 @@ const Drivers = () => {
           </div>
         )
       })}
+{selectedDriver && (
+  <Modal show={isModalOpen} handleClose={closeModal} url={selectedDriver.Driver.url}>
+    <h2>{`${selectedDriver.Driver.givenName} ${selectedDriver.Driver.familyName}`}</h2>
+    <p>{`Nationality: ${selectedDriver.Driver.nationality}`}</p>
+    <p>{`Team: ${selectedDriver.Constructors[0].name}`}</p>
+  </Modal>
+)}
     </div>
   );
 };
