@@ -1,0 +1,188 @@
+
+//Colors
+.team-mercedes {
+  background-color: #00d2be;
+  width: 5px;
+  height: 35px;
+}
+.team-redbull {
+  background-color: #1e41ff;
+  width: 5px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.team-ferrari {
+  background-color: #dc0000;
+  width: 5px;
+  height: 35px;
+}
+
+.team-astonmartin {
+  background-color: #006f62;
+  width: 5px;
+  height: 35px;
+}
+
+.team-alfaromeo {
+  background-color: #900000;
+  width: 5px;
+  height: 35px;
+}
+
+.team-alpine {
+  background-color: #0090ff;
+  width: 5px;
+  height: 35px;
+}
+
+.team-haas {
+  background-color: lightgrey;
+  width: 5px;
+  height: 35px;
+}
+
+.team-williams {
+  background-color: #3ba3e7;
+  width: 5px;
+  height: 35px;
+}
+
+.team-alphatauri {
+  background-color: rgb(12, 98, 179);
+  width: 5px;
+  height: 35px;
+}
+
+.team-mcLaren {
+  background-color: #ff8700;
+  width: 5px;
+  height: 35px;
+}
+
+.team-default {
+  background-color: black;
+  width: 5px;
+  height: 35px;
+}
+
+.redbullTextColor {
+  color: #1e41ff;
+}
+
+.mercedesTextColor {
+  color: #00d2be;
+}
+
+.ferrariTextColor {
+  color: #dc0000;
+}
+
+.astonMartinTextColor {
+  color: #006f62;
+}
+
+.alfaromeoTextColor {
+  color: #900000;
+}
+
+.alpineTextColor {
+  color: #0090ff;
+}
+
+.haasTextColor {
+  color: lightgrey;
+}
+
+.williamsTextColor {
+  color: #3ba3e7;
+}
+
+.alphaTauriTextColor {
+  color: rgb(12, 98, 179);
+}
+
+.mclarenTextColor {
+  color: #ff8700;
+}
+
+.defaultTextColor {
+  color: black;
+}
+//Colors  end
+
+
+
+.driversDiv { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  .driver-card-item {
+    width: 300px;
+    height: auto;
+    border-top: 3px solid black;
+    border-right: 3px solid  black;
+    border-top-right-radius: 10px;
+    .driverPoints {
+        display: flex;
+         justify-content: space-between;
+         align-items: center;
+       padding: 0.3rem;
+       .standing {
+        font-size: 1.5rem;
+        font-weight: bold;
+       }
+       .points {
+        font-size: 1.2rem;
+       }
+    }
+    .driverNameDiv {
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid  lightgray;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .firstName {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
+      .lastName {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.5rem;
+      }
+    }
+
+    .driverConstructor {
+      padding: 0.5rem;
+      color: grey;
+    }
+   .driverNumberAndImage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    img {
+      width: 170px;
+    }
+    .driverImage {
+      display: flex;
+    }
+    .driverNumber {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 3.5rem;
+      align-self: flex-end;
+      margin-top: auto;
+      font-weight: bold;
+    }
+   }
+  }
+}
