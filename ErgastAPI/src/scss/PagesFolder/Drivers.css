@@ -1,0 +1,23 @@
+.driversDiv {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.driversDiv .driver-card-item {
+  background-color: lightblue;
+  width: 300px;
+  height: 320px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-top-right-radius: 10px;
+}
+.driversDiv .driver-card-item .driverPoints {
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=Drivers.css.map */
