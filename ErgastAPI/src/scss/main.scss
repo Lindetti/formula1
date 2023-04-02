@@ -8,6 +8,11 @@
 @import './2-components/card';
 @import './2-components/navigation';
 @import './2-components/search';
+@import './2-components/table';
+@import './2-components/filter';
+@import './2-components/checkbox';
+
+@import './3-pages/lastresults';
 
 body {
   background-color: #f8f8f8;

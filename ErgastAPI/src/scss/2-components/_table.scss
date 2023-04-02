@@ -1,0 +1,48 @@
+.table {
+  width: 100%;
+
+  &__row {
+    &:nth-child(even) {
+      background-color: $bg-light;
+    }
+  }
+
+  &__item {
+    text-align: left;
+    padding-block: 1rem;
+    font-size: $font-size-sm;
+    color: $text-color-light;
+
+    &-head {
+      font-size: 0.6rem;
+      color: #4e4e4e;
+      text-transform: uppercase;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__overtake {
+    display: flex;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 0;
+    margin-left: 1rem;
+
+    & > span {
+      margin-left: 0.5rem;
+      font-size: 0.6rem;
+    }
+
+    &--up {
+      border-bottom: 10px solid $overtake-positive;
+    }
+
+    &--down {
+      border-bottom: 10px solid $overtake-negative;
+    }
+  }
+}

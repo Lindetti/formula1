@@ -4,10 +4,19 @@
   padding: 0 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .m-block {

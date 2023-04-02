@@ -1,0 +1,11 @@
+.track-info {
+  flex: 1;
+  font-size: $font-size-sm;
+  padding-bottom: 1rem;
+
+  & > h2 {
+    font-size: $font-size-base;
+    font-weight: 700;
+    margin-block: 0;
+  }
+}
