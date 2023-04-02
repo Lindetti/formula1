@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Drivers from "./pages/Drivers";
 import Standings from "./pages/Standings";
-import Results from "./pages/LastResult";
+import Results from "./pages/Results";
 import NotFound from "./pages/404";
 //https://ergast.com/api/f1/2023/2/drivers.json
 //https://ergast.com/api/f1/current.json // schedule
