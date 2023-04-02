@@ -12,6 +12,14 @@
   align-items: center;
 }
 
+.m-left {
+  margin-left: 1rem;
+
+  &--sm {
+    margin-left: 0.5rem;
+  }
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;

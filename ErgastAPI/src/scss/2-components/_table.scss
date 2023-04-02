@@ -34,7 +34,8 @@
 
     & > span {
       margin-left: 0.5rem;
-      font-size: 0.6rem;
+      margin-top: -2px;
+      font-size: 0.7rem;
     }
 
     &--up {
@@ -43,6 +44,19 @@
 
     &--down {
       border-bottom: 10px solid $overtake-negative;
+    }
+  }
+
+  &__fastest {
+    background-color: $fastest-lap;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: $border-radius-base;
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    & ~ span {
+      font-size: $font-size-sm;
     }
   }
 }
