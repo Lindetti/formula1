@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 //Colors
 .team-mercedes {
   background-color: #00d2be;
@@ -122,12 +122,41 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
   .driver-card-item {
+    position: relative;
     width: 300px;
     height: auto;
-    border-top: 3px solid black;
-    border-right: 3px solid  black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
     border-top-right-radius: 10px;
     cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 1rem;
+  
+    &:hover {
+      transform: translateY(0px);
+      border-top: 2px solid red;
+      border-color: red;
+    }
+  
+    &::before {
+      content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-right: 0.5px solid black;
+  border-top: 0.5px solid black;
+  border-top-right-radius: 7px;
+  transform-origin: top right;
+  transform: scaleY(1) translateX(0);
+  transition: transform 0.3s ease-in-out;
+    }
+  
+    &:hover::before {
+      transform: scaleY(0);
+    }
+
     .driverPoints {
         display: flex;
          justify-content: space-between;
@@ -135,10 +164,22 @@
        padding: 0.3rem;
        .standing {
         font-size: 1.5rem;
-        font-weight: bold;
+        font-weight: 800;
+        font-family: 'Audiowide', cursive;
        }
        .points {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        text-align: center;
+        h2 {
+          font-family: 'Audiowide', cursive;
+        }
+        .pts {
+          background-color: black;
+          color: white;
+          width: 70px;
+          font-size: 1.4rem;
+          border-radius: 5px;
+        }
        }
     }
     .driverNameDiv {
@@ -162,7 +203,6 @@
     }
 
     .driverConstructor {
-      padding: 0.5rem;
       color: grey;
     }
    .driverNumberAndImage {
@@ -185,5 +225,22 @@
       font-weight: bold;
     }
    }
+  }
+
+  .infoName {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .infoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    .test {
+      margin-bottom: 1.5rem;
+    }
   }
 }

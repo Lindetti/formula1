@@ -2,6 +2,7 @@ import ".././scss/PagesFolder/Drivers.scss"
 import { useState, useEffect } from "react";
 import DriverImage from "../images/person.png"
 import Modal from "../Components/Modal/Modal";
+import testDriver from "../images/max_verstappen.png";
 //https://ergast.com/api/f1/current/drivers.json
 
 const Drivers = () => {
@@ -96,11 +97,11 @@ const Drivers = () => {
           <div className="driver-card-item" key={key} onClick={() => handleDriverClick(driver)}>
             <div className="driverPoints">
             <div className="standing">
-            <p>{driver.position}</p>
+            <h1>{driver.position}</h1>
             </div>
             <div className="points">
-            <p>{driver.points}</p>
-            <p>Pts</p>
+            <h2>{driver.points}</h2>
+            <p className="pts">Pts</p>
             </div>
             </div>
 
@@ -120,7 +121,7 @@ const Drivers = () => {
             <p>{driver.Driver.permanentNumber}</p>
             </div>
             <div className="driverImage">
-            <img src={DriverImage} alt="Person" />
+            <img src={testDriver} alt="Person" />
             </div>
             </div>
           </div>
@@ -128,9 +129,16 @@ const Drivers = () => {
       })}
 {selectedDriver && (
   <Modal show={isModalOpen} handleClose={closeModal} url={selectedDriver.Driver.url}>
-    <h2>{`${selectedDriver.Driver.givenName} ${selectedDriver.Driver.familyName}`}</h2>
-    <p>{`Nationality: ${selectedDriver.Driver.nationality}`}</p>
-    <p>{`Team: ${selectedDriver.Constructors[0].name}`}</p>
+    <h2 className="infoName">{`${selectedDriver.Driver.givenName} ${selectedDriver.Driver.familyName}`}</h2>
+    <div className="infoDiv">
+      <div className="test"> 
+    <p>Nationality: {selectedDriver.Driver.nationality}</p>
+    <p>Birth: {selectedDriver.Driver.dateOfBirth} </p>
+    <p>Current Position: {selectedDriver.position}</p>
+    <p>Current Points: {selectedDriver.points} </p>
+    <p>Team: {selectedDriver.Constructors[0].name}</p>
+    </div>
+    </div>
   </Modal>
 )}
     </div>
